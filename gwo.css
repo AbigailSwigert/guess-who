@@ -43,6 +43,24 @@ html {
 .redCard:hover {
     background-color: rgb(187, 59, 59);
 }
+#header-container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+#btn-container {
+    text-align: center;
+    justify-self: start;
+}
+.game-btn {
+    width: 125px;
+    height: 30px;
+    margin: 10px;
+}
+#playerCard {
+    text-align: center;
+    justify-self: center;
+}
 .myCard {
     position: relative;
     margin-left: auto;
