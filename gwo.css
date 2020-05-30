@@ -1,0 +1,106 @@
+html {
+    font-family: "Open Sans", sans-serif;
+}
+#board {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.card {
+    position: relative;
+    height: 200px;
+    width: 150px;
+    margin: 0px 5px 10px 5px;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    box-shadow: .5px .5px 3px rgba(124, 124, 124, 0.267);
+}
+.blueCard {
+    background: rgb(148, 200, 218);
+}
+.blueCard:hover {
+    background-color: rgb(113, 155, 168);
+}
+.photo {
+    height: 150px;
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+.name {
+    text-align: center;
+    position: relative;
+    bottom: 8px;
+    width: 150px;
+}
+.redCard {
+    background: rgb(231, 76, 76);
+}
+.redCard:hover {
+    background-color: rgb(187, 59, 59);
+}
+.myCard {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 150px;
+    margin-bottom: 10px; 
+    background: white;
+    border-radius: 5%;
+    box-shadow: .5px .5px 3px rgba(124, 124, 124, 0.267);
+}
+.greyed-out {
+    background-color: rgb(121, 121, 121);
+}
+h3 {
+    text-align: center;
+    width: 100%;
+}
+h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 300%;
+    color: rgb(241, 241, 99);
+}
+#teamButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#blueTeam {
+    background: rgb(148, 200, 218);
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border: .5px solid rgb(197, 197, 197);
+    margin-right: 20px;
+}
+#blueTeam:hover {
+    background: rgb(113, 155, 168);
+}
+#blueTeam:active {
+    background: rgb(92, 126, 136);
+}
+#redTeam {
+    background: rgb(231, 76, 76);
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border: .5px solid rgb(197, 197, 197);
+    margin-right: 20px;
+}
+#redTeam:hover {
+    background: rgb(187, 59, 59);
+}
+#redTeam:active {
+    background: rgb(136, 43, 43);
+}
+a {
+    text-decoration: none;
+    color: black;
+}
