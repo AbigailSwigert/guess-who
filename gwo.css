@@ -76,6 +76,9 @@ html {
 .greyed-out {
     background-color: rgb(121, 121, 121);
 }
+.greyed-out:hover {
+    background-color: rgb(92, 92, 92);
+}
 h3 {
     text-align: center;
     width: 100%;

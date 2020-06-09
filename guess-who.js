@@ -1,9 +1,9 @@
-const redCards = document.getElementsByClassName('redCard');
-const blueCards = document.getElementsByClassName('blueCard');
+const allCards = document.getElementsByClassName('card');
 const myCard = document.querySelector('.myCard');
 let cards = [];
 let randomCard = cards[0];
 const communityBtn = document.getElementById('community-btn');
+const theOfficeBtn = document.getElementById('the-office-btn')
 const theOfficeCards = [
     "Jim Halpert",
     "Pam Beesly",
@@ -66,8 +66,10 @@ function updateCards(cardArray) {
         currName = document.getElementById('name-' + idx);
         currPhoto.src = 'Character Photos/' + card + '.jpg';
         currName.textContent = card;
+        document.getElementById('card-' + idx).classList.remove('greyed-out');
     };
     cards = cardArray;
+    giveRandomCard();
 };
 
 function updateCommunityCards(cardArray) {
@@ -76,8 +78,10 @@ function updateCommunityCards(cardArray) {
         currName = document.getElementById('name-' + idx);
         currPhoto.src = 'Character Photos/' + card + '.jpg';
         currName.textContent = card;
+        document.getElementById('card-' + idx).classList.remove('greyed-out');
     };
-    return cards = cardArray;
+    cards = cardArray;
+    giveRandomCard();
 };
 
 function giveRandomCard() {
@@ -87,17 +91,12 @@ function giveRandomCard() {
 };
 window.onload = giveRandomCard();
 
-for (c = 0; c < redCards.length; c++) {
-    redCards[c].addEventListener('click', function() {
-        this.classList.toggle('redCard');
-        this.classList.toggle('greyed-out');
-    })
-};
-for (c = 0; c < blueCards.length; c++) {
-    blueCards[c].addEventListener('click', function() {
-        this.classList.toggle('blueCard');
+
+for (c = 0; c < allCards.length; c++) {
+    allCards[c].addEventListener('click', function() {
         this.classList.toggle('greyed-out');
     })
 };
 myCard.addEventListener('click', giveRandomCard);
 communityBtn.addEventListener('click', () => updateCommunityCards(communityCards));
+theOfficeBtn.addEventListener('click', () => updateCards(theOfficeCards));
