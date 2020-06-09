@@ -3,6 +3,7 @@ const blueCards = document.getElementsByClassName('blueCard');
 const myCard = document.querySelector('.myCard');
 let cards = [];
 let randomCard = cards[0];
+const communityBtn = document.getElementById('community-btn');
 const theOfficeCards = [
     "Jim Halpert",
     "Pam Beesly",
@@ -42,7 +43,7 @@ const communityCards = [
     'Ian Duncan',
     'Elroy Patashnik',
     'Magnitude',
-    'Vice Dean Laybourne',
+    'V. Dean Laybourne',
     'Buddy',
     'Star-Burns',
     'Vaughn Miller',
@@ -66,7 +67,17 @@ function updateCards(cardArray) {
         currPhoto.src = 'Character Photos/' + card + '.jpg';
         currName.textContent = card;
     };
-    cards = theOfficeCards;
+    cards = cardArray;
+};
+
+function updateCommunityCards(cardArray) {
+    for (const [idx, card] of cardArray.entries()) {
+        currPhoto = document.getElementById('photo-' + idx);
+        currName = document.getElementById('name-' + idx);
+        currPhoto.src = 'Character Photos/' + card + '.jpg';
+        currName.textContent = card;
+    };
+    return cards = cardArray;
 };
 
 function giveRandomCard() {
@@ -89,3 +100,4 @@ for (c = 0; c < blueCards.length; c++) {
     })
 };
 myCard.addEventListener('click', giveRandomCard);
+communityBtn.addEventListener('click', () => updateCommunityCards(communityCards));
