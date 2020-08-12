@@ -1,5 +1,7 @@
 html {
     font-family: "Open Sans", sans-serif;
+    background-color: #292a2b;
+    color: rgb(220, 220, 220);
 }
 body {
     overflow-x: hidden;
@@ -21,10 +23,10 @@ body {
     box-shadow: .5px .5px 3px rgba(124, 124, 124, 0.267);
 }
 .blueCard {
-    background: rgb(148, 200, 218);
+    background-color: rgb(0, 138, 184);
 }
 .blueCard:hover {
-    background-color: rgb(113, 155, 168);
+    background-color: rgb(0, 112, 150);
 }
 .photo {
     height: 150px;
@@ -40,30 +42,41 @@ body {
     position: relative;
     bottom: 8px;
     width: 150px;
+    color: black;
 }
 .redCard {
-    background: rgb(231, 76, 76);
+    background-color: rgb(223, 43, 43);
 }
 .redCard:hover {
-    background-color: rgb(187, 59, 59);
+    background-color: rgb(185, 36, 36);
 }
 #header-container {
     width: 100vw;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
 #btn-container {
     text-align: center;
-    justify-self: start;
+    width: 350px;
+    margin-left: -350px;
 }
 .game-btn {
-    width: 125px;
+    width: 150px;
     height: 30px;
-    margin: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(241, 241, 99);
+}
+.game-btn:hover {
+    background-color: rgb(255, 255, 148);
 }
 #playerCard {
     text-align: center;
-    justify-self: center;
 }
 .myCard {
     position: relative;
@@ -72,15 +85,18 @@ body {
     height: 200px;
     width: 150px;
     margin-bottom: 10px; 
-    background: white;
+    background-color: rgb(220, 220, 220);
     border-radius: 5%;
     box-shadow: .5px .5px 3px rgba(124, 124, 124, 0.267);
 }
+.myCard:hover {
+    background-color: rgb(173, 173, 173);
+}
 .greyed-out {
-    background-color: rgb(121, 121, 121);
+    background-color: rgb(82, 81, 81);
 }
 .greyed-out:hover {
-    background-color: rgb(92, 92, 92);
+    background-color: rgb(59, 59, 59);
 }
 h3 {
     text-align: center;
@@ -97,35 +113,44 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-#blueTeam {
-    background: rgb(148, 200, 218);
+
+.team-btn {
     width: 150px;
     height: 30px;
     border-radius: 10px;
-    border: .5px solid rgb(197, 197, 197);
     margin-right: 20px;
+    border: none;
+    outline: none;
+}
+
+#blueTeam {
+    background-color: rgb(0, 138, 184);
 }
 #blueTeam:hover {
-    background: rgb(113, 155, 168);
+    background-color: rgb(0, 112, 150);
 }
 #blueTeam:active {
-    background: rgb(92, 126, 136);
+    background-color: rgb(0, 112, 150);
 }
 #redTeam {
-    background: rgb(231, 76, 76);
-    width: 150px;
-    height: 30px;
-    border-radius: 10px;
-    border: .5px solid rgb(197, 197, 197);
-    margin-right: 20px;
+    background-color: rgb(223, 43, 43);
 }
 #redTeam:hover {
-    background: rgb(187, 59, 59);
+    background-color: rgb(185, 36, 36);
 }
 #redTeam:active {
-    background: rgb(136, 43, 43);
+    background-color: rgb(185, 36, 36);
 }
 a {
     text-decoration: none;
     color: black;
+}
+
+@media only screen and (orientation: portrait) {
+    #header-container {
+        flex-direction: column;
+    }
+    #btn-container {
+        margin-left: 0;
+    }
 }
